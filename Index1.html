@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBS Travel Agency</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="mystyleKBS.css" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar">
+        <!-- Promotion bar at the top with a link to book a tour -->
+        <p>50% Off Your Next Trip. Hurry Up for Your New Tour! 
+            <span><a href="#">Book Your Tour</a></span>
+        </p>
+    </div>
+    
+    <!-- Start of Navigation bar -->
+    <nav class="navbar navbar-expand-lg">
+        
+        <!-- Branding section with logo -->
+        <div class="branding">
+            <img id="Logo" src="images/KBSLOGO.png" alt="Manorama Logo">
+        </div>
+        
+        <!-- Navigation menu, collapses on smaller screens -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- Navigation items -->
+            <ul class="navbar-nav mr-auto">
+                <!-- Home link -->
+                <li class="nav-item">
+                    <a class="nav-link" id="HomePage" href="#">
+                        <i class="bi bi-house-door-fill"></i> Home
+                    </a>
+                </li>
+                
+                <!-- About Us link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                
+                <!-- Dropdown menu for services -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Our Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+                        <!-- Dropdown items for various services -->
+                        <a class="dropdown-item" href="#serving">Packages</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Car & Coach Rental</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Event Organizers</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Hotel Booking Services</a>
+                    </div>
+                </li>
+                
+                <!-- Car Packages link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Car Packages</a>
+                </li>
+                
+                <!-- Photo Gallery link (Currently no dropdown menu) -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#gallery" id="navbarDropdownTariff" role="button" aria-haspopup="true" aria-expanded="false">
+                        Photo Gallery
+                    </a>
+                </li>
+                
+                <!-- Contact Us link -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        
+            <!-- Register and Login Buttons, open respective modals -->
+            <button data-toggle="modal" data-target="#regmodal" id="registerbtn" class="btn">Register</button>
+            <button data-toggle="modal" data-target="#loginmodal" id="loginbtn" class="btn">Login</button>
+        </div>  
+    </nav>
+    
+    <!-- End of navbar -->
+    
+  <!-- Start of Hero Section with Jumbotron -->
+<div id="HeroSection">
+  
+    <!-- Jumbotron section to display the main call-to-action -->
+    <div class="jumbotron">
+      
+      <!-- Text content within the jumbotron -->
+      <div id="textdata">
+        
+        <!-- Icon with text label -->
+        <div>
+            <span class="svg-color">
+            <!-- SVG icon for "Domestic" category -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+            <path d="M12.005 11.8928C13.9204 8.88722 13.6796 9.2622 13.7348 9.18383C14.4322 8.20023 14.8008 7.04257 14.8008 5.83594C14.8008 2.63602 12.2041 0 9 0C5.80634 0 3.19922 2.63081 3.19922 5.83594C3.19922 7.0418 3.57553 8.22976 4.29574 9.22662L5.99491 11.8929C4.17822 12.172 1.08984 13.004 1.08984 14.8359C1.08984 15.5037 1.52571 16.4554 3.60218 17.197C5.05209 17.7148 6.96906 18 9 18C12.7978 18 16.9102 16.9287 16.9102 14.8359C16.9102 13.0037 13.8254 12.1726 12.005 11.8928ZM5.17672 8.6465C5.17093 8.63744 5.16487 8.62856 5.15855 8.61985C4.55924 7.79537 4.25391 6.81824 4.25391 5.83594C4.25391 3.19859 6.37755 1.05469 9 1.05469C11.617 1.05469 13.7461 3.19954 13.7461 5.83594C13.7461 6.81982 13.4465 7.7638 12.8796 8.56656C12.8288 8.63357 13.0939 8.22182 9 14.6457L5.17672 8.6465ZM9 16.9453C4.85177 16.9453 2.14453 15.726 2.14453 14.8359C2.14453 14.2377 3.53559 13.2541 6.61809 12.8707L8.55527 15.9104C8.60291 15.9852 8.66863 16.0467 8.74636 16.0893C8.82408 16.132 8.91131 16.1543 8.99996 16.1543C9.08862 16.1543 9.17584 16.132 9.25357 16.0893C9.3313 16.0467 9.39702 15.9852 9.44466 15.9104L11.3818 12.8707C14.4644 13.2541 15.8555 14.2377 15.8555 14.8359C15.8555 15.7184 13.1726 16.9453 9 16.9453Z" />
+            <path d="M9 3.19922C7.54611 3.19922 6.36328 4.38205 6.36328 5.83594C6.36328 7.28982 7.54611 8.47266 9 8.47266C10.4539 8.47266 11.6367 7.28982 11.6367 5.83594C11.6367 4.38205 10.4539 3.19922 9 3.19922ZM9 7.41797C8.12767 7.41797 7.41797 6.70827 7.41797 5.83594C7.41797 4.96361 8.12767 4.25391 9 4.25391C9.87233 4.25391 10.582 4.96361 10.582 5.83594C10.582 6.70827 9.87233 7.41797 9 7.41797Z" />
+            </svg>
+            Domestic
+            </span>
+        </div>
+        
+        <!-- Main heading of the jumbotron -->
+        <h1 class="custom-heading">Let's Explore the Bharat with<br>KBS Travels</h1>
+        
+        <!-- Subheading or description text -->
+        <p>Exciting Domestic tour package
+        <br> Enjoy with Family, Friends & special plans for honeymoon.</p>
+        
+        <!-- Call-to-action button -->
+        <br> 
+        <button class="btn">Book A Trip?</button>
+      </div>
+      
+      <!-- Optional image section (currently commented out) -->
+      <!-- <div id="Bookingimg">
+        <img src="images/WorldBG.png">
+      </div> -->
+      
+    </div>  
+  </div><!-- End of Hero Section with Jumbotron -->
+  
+<!-- Modal for Register and Login buttons -->
+
+<!-- Registration Modal -->
+<div class="modal" id="regmodal">  <!-- For Register Button -->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <!-- Modal header with custom background and close button -->
+            <div class="modal-header bg-custom ">
+                REGISTRATE HERE
+                <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body containing the registration form -->
+            <div class="modal-body">
+                <form>
+                    <!-- Fullname input field -->
+                    <div class="form-group">
+                        <input type="text" placeholder="FULLNAME" class="form-control">
+                    </div>
+                    <!-- Contact number input field -->
+                    <div class="form-group">
+                        <input type="tel" placeholder="CONTACT" class="form-control">
+                    </div>
+                    <!-- Email input field -->
+                    <div class="form-group">
+                       <input type="email" placeholder="EMAIL" class="form-control">
+                    </div>
+                    <!-- Username input field -->
+                    <div class="form-group">
+                        <input type="text" placeholder="USERNAME" class="form-control">
+                    </div> 
+                    <!-- Link to switch to login modal if the user already has an account -->
+                    <p>Already have an Account <a href="#loginmodal" data-toggle="modal" data-dismiss="modal">Sign In</a></p>
+                </form>
+            </div>
+            
+            <!-- Modal footer with Register and Cancel buttons -->
+            <div class="modal-footer">
+                <button class="btn">Register</button>
+                <button class="btn" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal" id="loginmodal"> <!-- For Login Button -->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <!-- Modal header with custom background and close button -->
+            <div class="modal-header bg-custom">
+                LOGIN HERE
+                <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body containing the login form -->
+            <div class="modal-body">
+                <form>
+                    <!-- Username input field -->
+                    <div class="form-group">
+                        <input type="text" placeholder="USERNAME" class="form-control">
+                    </div>
+                    <!-- Password input field -->
+                    <div class="form-group">
+                        <input type="password" placeholder="PASSWORD" class="form-control"><br>
+                    </div>
+                    <!-- Link to switch to registration modal if the user doesn't have an account -->
+                    <p>Don't have an Account <a href="#regmodal" data-toggle="modal" data-dismiss="modal">Sign Up</a></p>
+                </form>
+            </div>
+            
+            <!-- Modal footer with Login and Cancel buttons -->
+            <div class="modal-footer">
+                <button class="btn btn-outline-success">Login</button>
+                <button class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Modal -->
+
+
+ <!-- Start of About Us Section -->
+<div class="container" id="about">
+
+    <!-- Header with SVG icons and a title -->
+    <span>
+        <!-- Left decorative SVG icon -->
+        <svg class="svg-color pt-1" xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.92556 7.69046C2.35744 7.63298 2.78906 7.57563 3.21925 7.51077C4.14925 7.37065 5.08588 7.29138 6.01763 7.21249L6.01888 7.21243C6.15888 7.20055 6.29875 7.18874 6.43844 7.17668C7.50663 6.968 8.58732 6.89083 9.66644 6.94628C10.7733 7.06837 11.8592 7.41421 12.8857 7.97163L12.8857 8.23655C11.8592 8.79397 10.7733 9.13981 9.66644 9.26191C8.58732 9.31735 7.50663 9.24018 6.43844 9.03151C5.36831 8.93932 4.29813 8.82412 3.21925 8.69742C2.14031 8.57065 1.07012 8.42092 -6.78702e-07 8.23655L-7.01862e-07 7.97163C0.639938 7.86135 1.28306 7.77588 1.92556 7.69046ZM10.7633 15.8502C10.9332 15.4596 11.12 15.0855 11.3061 14.7127C11.389 14.5468 11.4717 14.3811 11.5527 14.2144C11.8159 13.6729 12.1141 13.1545 12.4299 12.6477C12.5448 12.4632 12.64 12.2604 12.7336 12.061C12.8972 11.7124 13.056 11.3741 13.3071 11.1616C13.7816 10.7768 14.3283 10.5734 14.886 10.574L15 10.7353C14.9945 11.4677 14.8235 12.1813 14.5088 12.7859C14.3311 13.1802 14.0336 13.4059 13.7358 13.6317C13.6073 13.7292 13.4787 13.8268 13.3597 13.9379C12.965 14.3066 12.5615 14.6637 12.1492 15.0093C11.7369 15.3549 11.3159 15.689 10.8685 16L10.7633 15.8502ZM11.7543 0.665536C11.4882 0.436859 11.2226 0.208798 10.9388 -1.5523e-06L10.816 0.149784C11.0528 0.725784 11.3072 1.27877 11.5703 1.82018C11.8335 2.3616 12.1142 2.89157 12.3949 3.40997C12.4795 3.56628 12.5538 3.73514 12.628 3.90394C12.8 4.29501 12.9718 4.68572 13.2721 4.91908C13.7312 5.33563 14.2754 5.56049 14.8334 5.56418L14.9562 5.4144C14.9651 4.68055 14.8095 3.95951 14.5089 3.3408C14.3471 3.01108 14.0894 2.80252 13.824 2.58763C13.6722 2.46474 13.5178 2.33975 13.3773 2.1888C12.9914 1.77409 12.6142 1.3824 12.1931 1.0368C12.0446 0.91489 11.8994 0.790152 11.7543 0.665536Z" />
+        </svg>
+
+        <!-- Text with custom color and padding -->
+        <span class="color-custom px-1">Amazing Domestic Tour Package</span> 
+
+        <!-- Right decorative SVG icon -->
+        <svg class="svg-color pt-1"  xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0744 8.30954C12.6426 8.36702 12.2109 8.42437 11.7807 8.48923C10.8507 8.62935 9.91412 8.70862 8.98237 8.78751L8.98112 8.78757C8.84112 8.79945 8.70125 8.81126 8.56156 8.82332C7.49337 9.032 6.41268 9.10917 5.33356 9.05372C4.22669 8.93163 3.14081 8.58578 2.11432 8.02837V7.76345C3.14081 7.20603 4.22669 6.86018 5.33356 6.73809C6.41268 6.68265 7.49337 6.75982 8.56156 6.96849C9.63169 7.06068 10.7019 7.17588 11.7807 7.30259C12.8597 7.42935 13.9299 7.57908 15 7.76345V8.02837C14.3601 8.13865 13.7169 8.22412 13.0744 8.30954ZM4.23673 0.14976C4.06677 0.540388 3.88 0.914468 3.69388 1.28726C3.61104 1.45317 3.52831 1.61887 3.44728 1.78561C3.18413 2.32705 2.88589 2.84546 2.57011 3.35234C2.45519 3.5368 2.36002 3.73958 2.26642 3.939C2.10282 4.28757 1.94402 4.62593 1.69294 4.83843C1.21844 5.2232 0.671682 5.42665 0.114031 5.42597L0 5.26468C0.00551875 4.53235 0.176481 3.81866 0.491219 3.2141C0.6689 2.81982 0.966407 2.59414 1.26418 2.36828C1.39271 2.27078 1.52129 2.17324 1.64031 2.06209C2.03504 1.69345 2.43853 1.33633 2.8508 0.990726C3.26307 0.645126 3.68411 0.31104 4.13147 0L4.23673 0.14976ZM3.24568 15.3345C3.51184 15.5631 3.77735 15.7912 4.06123 16L4.18404 15.8502C3.9472 15.2742 3.69281 14.7212 3.42966 14.1798C3.16651 13.6384 2.88581 13.1084 2.60511 12.59C2.52048 12.4337 2.44621 12.2649 2.37198 12.0961C2.19999 11.705 2.02816 11.3143 1.72794 11.0809C1.26879 10.6644 0.7246 10.4395 0.166563 10.4358L0.0437562 10.5856C0.0348937 11.3194 0.190456 12.0405 0.491113 12.6592C0.652919 12.9889 0.910556 13.1975 1.17597 13.4124C1.32782 13.5353 1.48222 13.6602 1.62268 13.8112C2.00863 14.2259 2.38582 14.6176 2.80686 14.9632C2.95538 15.0851 3.10063 15.2098 3.24568 15.3345Z" />
+        </svg>
+    </span>
+
+    <!-- Section heading -->
+    <h2 class="pt-2 custom-heading">Let’s explore the World with KBS Travels.</h2>
+
+    <!-- Main content area with two columns -->
+    <div class="row">
+        <!-- Left column: Accordion with tour package details -->
+        <div class="col-md-5">
+            <div class="accordion">
+                <!-- Accordion item 1: Dream Destination -->
+                <div class="accordion-item">
+                    <!-- Accordion header -->
+                    <button class="accordion-header color-custom" data-toggle="collapse" data-target="#cont1">Dream Destination</button>
+                    <!-- Accordion content (visible by default) -->
+                    <div class="accordion-content show" id="cont1">
+                        <p>Experience the ultimate World getaway with KBS Travels! Our all-inclusive tour package features flight tickets, luxurious accommodations, a memorable cruise dinner, beach excursions, and the best activities in Domestic. Explore pristine beaches, indulge in water sports, savor local cuisine, and immerse yourself in the vibrant culture. Book now for an unforgettable adventure!</p>
+                    </div>
+                </div>
+
+                <!-- Accordion item 2: Domestic Group Package -->
+                <div class="accordion-item">
+                    <!-- Accordion header -->
+                    <button class="accordion-header color-custom" data-toggle="collapse" data-target="#cont2">Domestic Group Package</button>
+                    <!-- Accordion content (collapsed by default) -->
+                    <div class="accordion-content collapse" id="cont2">
+                        <p>Embark on a romantic escapade to world with KBS Travels' couple package! Enjoy the convenience of included flight tickets, luxurious accommodations, a romantic cruise dinner, leisurely beach visits, and the best activities Domestic has to offer. From serene sunsets to thrilling water sports, create cherished memories together. Book now for an unforgettable romantic retreat!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spacer column for alignment -->
+        <div class="col-md-1"></div>
+
+        <!-- Right column: Image representing the tour packages -->
+        <div class="col-md-6">
+            <img src="images/about-img.png" class="img-fluid">
+        </div>
+    </div>
+</div>
+<!-- End of About Us Section -->
+
+<!-- start of Our Services -->
+  <div class="container" id="serving">
+    <div class="Services text-center pt-5 pb-3">
+        <svg class="svg-color pt-1" xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.92556 7.69046C2.35744 7.63298 2.78906 7.57563 3.21925 7.51077C4.14925 7.37065 5.08588 7.29138 6.01763 7.21249L6.01888 7.21243C6.15888 7.20055 6.29875 7.18874 6.43844 7.17668C7.50663 6.968 8.58732 6.89083 9.66644 6.94628C10.7733 7.06837 11.8592 7.41421 12.8857 7.97163L12.8857 8.23655C11.8592 8.79397 10.7733 9.13981 9.66644 9.26191C8.58732 9.31735 7.50663 9.24018 6.43844 9.03151C5.36831 8.93932 4.29813 8.82412 3.21925 8.69742C2.14031 8.57065 1.07012 8.42092 -6.78702e-07 8.23655L-7.01862e-07 7.97163C0.639938 7.86135 1.28306 7.77588 1.92556 7.69046ZM10.7633 15.8502C10.9332 15.4596 11.12 15.0855 11.3061 14.7127C11.389 14.5468 11.4717 14.3811 11.5527 14.2144C11.8159 13.6729 12.1141 13.1545 12.4299 12.6477C12.5448 12.4632 12.64 12.2604 12.7336 12.061C12.8972 11.7124 13.056 11.3741 13.3071 11.1616C13.7816 10.7768 14.3283 10.5734 14.886 10.574L15 10.7353C14.9945 11.4677 14.8235 12.1813 14.5088 12.7859C14.3311 13.1802 14.0336 13.4059 13.7358 13.6317C13.6073 13.7292 13.4787 13.8268 13.3597 13.9379C12.965 14.3066 12.5615 14.6637 12.1492 15.0093C11.7369 15.3549 11.3159 15.689 10.8685 16L10.7633 15.8502ZM11.7543 0.665536C11.4882 0.436859 11.2226 0.208798 10.9388 -1.5523e-06L10.816 0.149784C11.0528 0.725784 11.3072 1.27877 11.5703 1.82018C11.8335 2.3616 12.1142 2.89157 12.3949 3.40997C12.4795 3.56628 12.5538 3.73514 12.628 3.90394C12.8 4.29501 12.9718 4.68572 13.2721 4.91908C13.7312 5.33563 14.2754 5.56049 14.8334 5.56418L14.9562 5.4144C14.9651 4.68055 14.8095 3.95951 14.5089 3.3408C14.3471 3.01108 14.0894 2.80252 13.824 2.58763C13.6722 2.46474 13.5178 2.33975 13.3773 2.1888C12.9914 1.77409 12.6142 1.3824 12.1931 1.0368C12.0446 0.91489 11.8994 0.790152 11.7543 0.665536Z" />
+        </svg>
+           <span class="color-custom px-1">Services We Offer</span> 
+        <svg class="svg-color pt-1"  xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0744 8.30954C12.6426 8.36702 12.2109 8.42437 11.7807 8.48923C10.8507 8.62935 9.91412 8.70862 8.98237 8.78751L8.98112 8.78757C8.84112 8.79945 8.70125 8.81126 8.56156 8.82332C7.49337 9.032 6.41268 9.10917 5.33356 9.05372C4.22669 8.93163 3.14081 8.58578 2.11432 8.02837V7.76345C3.14081 7.20603 4.22669 6.86018 5.33356 6.73809C6.41268 6.68265 7.49337 6.75982 8.56156 6.96849C9.63169 7.06068 10.7019 7.17588 11.7807 7.30259C12.8597 7.42935 13.9299 7.57908 15 7.76345V8.02837C14.3601 8.13865 13.7169 8.22412 13.0744 8.30954ZM4.23673 0.14976C4.06677 0.540388 3.88 0.914468 3.69388 1.28726C3.61104 1.45317 3.52831 1.61887 3.44728 1.78561C3.18413 2.32705 2.88589 2.84546 2.57011 3.35234C2.45519 3.5368 2.36002 3.73958 2.26642 3.939C2.10282 4.28757 1.94402 4.62593 1.69294 4.83843C1.21844 5.2232 0.671682 5.42665 0.114031 5.42597L0 5.26468C0.00551875 4.53235 0.176481 3.81866 0.491219 3.2141C0.6689 2.81982 0.966407 2.59414 1.26418 2.36828C1.39271 2.27078 1.52129 2.17324 1.64031 2.06209C2.03504 1.69345 2.43853 1.33633 2.8508 0.990726C3.26307 0.645126 3.68411 0.31104 4.13147 0L4.23673 0.14976ZM3.24568 15.3345C3.51184 15.5631 3.77735 15.7912 4.06123 16L4.18404 15.8502C3.9472 15.2742 3.69281 14.7212 3.42966 14.1798C3.16651 13.6384 2.88581 13.1084 2.60511 12.59C2.52048 12.4337 2.44621 12.2649 2.37198 12.0961C2.19999 11.705 2.02816 11.3143 1.72794 11.0809C1.26879 10.6644 0.7246 10.4395 0.166563 10.4358L0.0437562 10.5856C0.0348937 11.3194 0.190456 12.0405 0.491113 12.6592C0.652919 12.9889 0.910556 13.1975 1.17597 13.4124C1.32782 13.5353 1.48222 13.6602 1.62268 13.8112C2.00863 14.2259 2.38582 14.6176 2.80686 14.9632C2.95538 15.0851 3.10063 15.2098 3.24568 15.3345Z" />
+        </svg><br>
+        <h2 class="custom-heading">Ultimate Travel Experience</h2>
+    </div>
+<!-- start of first row -->
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <!-- Card container for a travel package -->
+            <div class="card">
+                <div class="card-body p-0">
+                    <!-- Batch label for the destination -->
+                    <div class="batch">
+                        <!-- SVG icon for the batch label -->
+                        <svg class="svg-batch" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <!-- SVG paths for the icon -->
+                            <path d="M12.005 11.8928C13.9204 8.88722 13.6796 9.2622 13.7348 9.18383C14.4322 8.20023 14.8008 7.04257 14.8008 5.83594C14.8008 2.63602 12.2041 0 9 0C5.80634 0 3.19922 2.63081 3.19922 5.83594C3.19922 7.0418 3.57553 8.22976 4.29574 9.22662L5.99491 11.8929C4.17822 12.172 1.08984 13.004 1.08984 14.8359C1.08984 15.5037 1.52571 16.4554 3.60218 17.197C5.05209 17.7148 6.96906 18 9 18C12.7978 18 16.9102 16.9287 16.9102 14.8359C16.9102 13.0037 13.8254 12.1726 12.005 11.8928ZM5.17672 8.6465C5.17093 8.63744 5.16487 8.62856 5.15855 8.61985C4.55924 7.79537 4.25391 6.81824 4.25391 5.83594C4.25391 3.19859 6.37755 1.05469 9 1.05469C11.617 1.05469 13.7461 3.19954 13.7461 5.83594C13.7461 6.81982 13.4465 7.7638 12.8796 8.56656C12.8288 8.63357 13.0939 8.22182 9 14.6457L5.17672 8.6465ZM9 16.9453C4.85177 16.9453 2.14453 15.726 2.14453 14.8359C2.14453 14.2377 3.53559 13.2541 6.61809 12.8707L8.55527 15.9104C8.60291 15.9852 8.66863 16.0467 8.74636 16.0893C8.82408 16.132 8.91131 16.1543 8.99996 16.1543C9.08862 16.1543 9.17584 16.132 9.25357 16.0893C9.3313 16.0467 9.39702 15.9852 9.44466 15.9104L11.3818 12.8707C14.4644 13.2541 15.8555 14.2377 15.8555 14.8359C15.8555 15.7184 13.1726 16.9453 9 16.9453Z" />
+                            <path d="M9 3.19922C7.54611 3.19922 6.36328 4.38205 6.36328 5.83594C6.36328 7.28982 7.54611 8.47266 9 8.47266C10.4539 8.47266 11.6367 7.28982 11.6367 5.83594C11.6367 4.38205 10.4539 3.19922 9 3.19922ZM9 7.41797C8.12767 7.41797 7.41797 6.70827 7.41797 5.83594C7.41797 4.96361 8.12767 4.25391 9 4.25391C9.87233 4.25391 10.582 4.96361 10.582 5.83594C10.582 6.70827 9.87233 7.41797 9 7.41797Z" />
+                        </svg>
+                        <!-- Destination label -->
+                        <span>GOA</span>
+                    </div>
+                    
+                    <!-- Image section of the card -->
+                    <div class="card-img-top">
+                        <img src="images/Goa.png" class="img-fluid" alt="Goa Travel Package Image">
+                    </div>
+                    
+                    <!-- Card title/description -->
+                    <h6 class="p-2">4N Exciting Domestic Trip - travel package.</h6>
+                </div>
+                
+                <!-- Footer of the card containing pricing and booking button -->
+                <div class="card-footer">
+                    <!-- Pricing information area -->
+                    <div class="price-area">
+                        <!-- Label for starting price -->
+                        <h6>Starting From:</h6>
+                        <!-- Price display -->
+                        <span class="color-custom h5"><strong>₹16,000</strong></span>
+                        <!-- Note about taxes -->
+                        <p>TAXES INCL/PERS</p>
+                    </div>
+                    <!-- Button to book the trip -->
+                    <button class="btn">Book Trip</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="col-md-4 mx-auto">
+            <div class="card ">
+                <div class="card-body p-0">
+                    <div class="batch">
+                        <svg class="svg-batch" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M12.005 11.8928C13.9204 8.88722 13.6796 9.2622 13.7348 9.18383C14.4322 8.20023 14.8008 7.04257 14.8008 5.83594C14.8008 2.63602 12.2041 0 9 0C5.80634 0 3.19922 2.63081 3.19922 5.83594C3.19922 7.0418 3.57553 8.22976 4.29574 9.22662L5.99491 11.8929C4.17822 12.172 1.08984 13.004 1.08984 14.8359C1.08984 15.5037 1.52571 16.4554 3.60218 17.197C5.05209 17.7148 6.96906 18 9 18C12.7978 18 16.9102 16.9287 16.9102 14.8359C16.9102 13.0037 13.8254 12.1726 12.005 11.8928ZM5.17672 8.6465C5.17093 8.63744 5.16487 8.62856 5.15855 8.61985C4.55924 7.79537 4.25391 6.81824 4.25391 5.83594C4.25391 3.19859 6.37755 1.05469 9 1.05469C11.617 1.05469 13.7461 3.19954 13.7461 5.83594C13.7461 6.81982 13.4465 7.7638 12.8796 8.56656C12.8288 8.63357 13.0939 8.22182 9 14.6457L5.17672 8.6465ZM9 16.9453C4.85177 16.9453 2.14453 15.726 2.14453 14.8359C2.14453 14.2377 3.53559 13.2541 6.61809 12.8707L8.55527 15.9104C8.60291 15.9852 8.66863 16.0467 8.74636 16.0893C8.82408 16.132 8.91131 16.1543 8.99996 16.1543C9.08862 16.1543 9.17584 16.132 9.25357 16.0893C9.3313 16.0467 9.39702 15.9852 9.44466 15.9104L11.3818 12.8707C14.4644 13.2541 15.8555 14.2377 15.8555 14.8359C15.8555 15.7184 13.1726 16.9453 9 16.9453Z" />
+                            <path d="M9 3.19922C7.54611 3.19922 6.36328 4.38205 6.36328 5.83594C6.36328 7.28982 7.54611 8.47266 9 8.47266C10.4539 8.47266 11.6367 7.28982 11.6367 5.83594C11.6367 4.38205 10.4539 3.19922 9 3.19922ZM9 7.41797C8.12767 7.41797 7.41797 6.70827 7.41797 5.83594C7.41797 4.96361 8.12767 4.25391 9 4.25391C9.87233 4.25391 10.582 4.96361 10.582 5.83594C10.582 6.70827 9.87233 7.41797 9 7.41797Z" />
+                        </svg> 
+                        <span>DO-DHAM</span>
+                    </div>
+                    <img src="images/Dham.png" class="img-fluid card-img-top">
+                    <h6 class="p-2">8N Excitng Domestic Trip-  Special Package</h6>
+                </div>
+                <div class="card-footer">
+                        <div class="price-area">
+                            <h6>Starting Form:</h6>
+                            <span class="color-custom h5"><strong>₹28,000</strong></span>
+                            <p>TAXES INCL/PERS</p>
+                        </div>
+                        <button class="btn">Book Trip</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 mx-auto">
+            <div class="card ">
+                <div class="card-body p-0">
+                    <div class="batch">
+                        <svg class="svg-batch" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M12.005 11.8928C13.9204 8.88722 13.6796 9.2622 13.7348 9.18383C14.4322 8.20023 14.8008 7.04257 14.8008 5.83594C14.8008 2.63602 12.2041 0 9 0C5.80634 0 3.19922 2.63081 3.19922 5.83594C3.19922 7.0418 3.57553 8.22976 4.29574 9.22662L5.99491 11.8929C4.17822 12.172 1.08984 13.004 1.08984 14.8359C1.08984 15.5037 1.52571 16.4554 3.60218 17.197C5.05209 17.7148 6.96906 18 9 18C12.7978 18 16.9102 16.9287 16.9102 14.8359C16.9102 13.0037 13.8254 12.1726 12.005 11.8928ZM5.17672 8.6465C5.17093 8.63744 5.16487 8.62856 5.15855 8.61985C4.55924 7.79537 4.25391 6.81824 4.25391 5.83594C4.25391 3.19859 6.37755 1.05469 9 1.05469C11.617 1.05469 13.7461 3.19954 13.7461 5.83594C13.7461 6.81982 13.4465 7.7638 12.8796 8.56656C12.8288 8.63357 13.0939 8.22182 9 14.6457L5.17672 8.6465ZM9 16.9453C4.85177 16.9453 2.14453 15.726 2.14453 14.8359C2.14453 14.2377 3.53559 13.2541 6.61809 12.8707L8.55527 15.9104C8.60291 15.9852 8.66863 16.0467 8.74636 16.0893C8.82408 16.132 8.91131 16.1543 8.99996 16.1543C9.08862 16.1543 9.17584 16.132 9.25357 16.0893C9.3313 16.0467 9.39702 15.9852 9.44466 15.9104L11.3818 12.8707C14.4644 13.2541 15.8555 14.2377 15.8555 14.8359C15.8555 15.7184 13.1726 16.9453 9 16.9453Z" />
+                            <path d="M9 3.19922C7.54611 3.19922 6.36328 4.38205 6.36328 5.83594C6.36328 7.28982 7.54611 8.47266 9 8.47266C10.4539 8.47266 11.6367 7.28982 11.6367 5.83594C11.6367 4.38205 10.4539 3.19922 9 3.19922ZM9 7.41797C8.12767 7.41797 7.41797 6.70827 7.41797 5.83594C7.41797 4.96361 8.12767 4.25391 9 4.25391C9.87233 4.25391 10.582 4.96361 10.582 5.83594C10.582 6.70827 9.87233 7.41797 9 7.41797Z" />
+                        </svg> 
+                        <span>DHARAMSHALA</span>
+                    </div>
+                    <img src="images/Dharamshala.png" class="img-fluid card-img-top">
+                    <h6 class="p-2">6N Magical Gateway-   Special Package.</h6>
+                </div>
+                <div class="card-footer">
+                        <div class="price-area">
+                            <h6>Starting Form:</h6>
+                            <span class="color-custom h5"><strong>₹17,000</strong></span>
+                            <p>TAXES INCL/PERS</p>
+                        </div>
+                        <button class="btn">Book Trip</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--  End of first row -->
+<!-- Start of second row -->
+<div class="row mt-4">
+    <div class="col-md-4 mx-auto">
+        <div class="card ">
+            <div class="card-body p-0">
+                <div class="batch">
+                    <svg class="svg-batch" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <path d="M12.005 11.8928C13.9204 8.88722 13.6796 9.2622 13.7348 9.18383C14.4322 8.20023 14.8008 7.04257 14.8008 5.83594C14.8008 2.63602 12.2041 0 9 0C5.80634 0 3.19922 2.63081 3.19922 5.83594C3.19922 7.0418 3.57553 8.22976 4.29574 9.22662L5.99491 11.8929C4.17822 12.172 1.08984 13.004 1.08984 14.8359C1.08984 15.5037 1.52571 16.4554 3.60218 17.197C5.05209 17.7148 6.96906 18 9 18C12.7978 18 16.9102 16.9287 16.9102 14.8359C16.9102 13.0037 13.8254 12.1726 12.005 11.8928ZM5.17672 8.6465C5.17093 8.63744 5.16487 8.62856 5.15855 8.61985C4.55924 7.79537 4.25391 6.81824 4.25391 5.83594C4.25391 3.19859 6.37755 1.05469 9 1.05469C11.617 1.05469 13.7461 3.19954 13.7461 5.83594C13.7461 6.81982 13.4465 7.7638 12.8796 8.56656C12.8288 8.63357 13.0939 8.22182 9 14.6457L5.17672 8.6465ZM9 16.9453C4.85177 16.9453 2.14453 15.726 2.14453 14.8359C2.14453 14.2377 3.53559 13.2541 6.61809 12.8707L8.55527 15.9104C8.60291 15.9852 8.66863 16.0467 8.74636 16.0893C8.82408 16.132 8.91131 16.1543 8.99996 16.1543C9.08862 16.1543 9.17584 16.132 9.25357 16.0893C9.3313 16.0467 9.39702 15.9852 9.44466 15.9104L11.3818 12.8707C14.4644 13.2541 15.8555 14.2377 15.8555 14.8359C15.8555 15.7184 13.1726 16.9453 9 16.9453Z" />
+                        <path d="M9 3.19922C7.54611 3.19922 6.36328 4.38205 6.36328 5.83594C6.36328 7.28982 7.54611 8.47266 9 8.47266C10.4539 8.47266 11.6367 7.28982 11.6367 5.83594C11.6367 4.38205 10.4539 3.19922 9 3.19922ZM9 7.41797C8.12767 7.41797 7.41797 6.70827 7.41797 5.83594C7.41797 4.96361 8.12767 4.25391 9 4.25391C9.87233 4.25391 10.582 4.96361 10.582 5.83594C10.582 6.70827 9.87233 7.41797 9 7.41797Z" />
+                    </svg> 
+                    <span>DWARAKA & SOMNATH</span>
+                </div>
+                <img src="images/Dharamshala.png" class="img-fluid card-img-top">
+                <h6 class="p-2">3N Fun Domestic Holiday</h6>
+            </div>
+            <div class="card-footer">
+                    <div class="price-area">
+                        <h6>Starting Form:</h6>
+                        <span class="color-custom h5"><strong>₹16,000</strong></span>
+                        <p>TAXES INCL/PERS</p>
+                    </div>
+                    <button class="btn">Book Trip</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4 mx-auto">
+        <div class="card ">
+            <div class="card-body p-0">
+                <div class="batch">
+                    <svg class="svg-batch" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <path d="M12.005 11.8928C13.9204 8.88722 13.6796 9.2622 13.7348 9.18383C14.4322 8.20023 14.8008 7.04257 14.8008 5.83594C14.8008 2.63602 12.2041 0 9 0C5.80634 0 3.19922 2.63081 3.19922 5.83594C3.19922 7.0418 3.57553 8.22976 4.29574 9.22662L5.99491 11.8929C4.17822 12.172 1.08984 13.004 1.08984 14.8359C1.08984 15.5037 1.52571 16.4554 3.60218 17.197C5.05209 17.7148 6.96906 18 9 18C12.7978 18 16.9102 16.9287 16.9102 14.8359C16.9102 13.0037 13.8254 12.1726 12.005 11.8928ZM5.17672 8.6465C5.17093 8.63744 5.16487 8.62856 5.15855 8.61985C4.55924 7.79537 4.25391 6.81824 4.25391 5.83594C4.25391 3.19859 6.37755 1.05469 9 1.05469C11.617 1.05469 13.7461 3.19954 13.7461 5.83594C13.7461 6.81982 13.4465 7.7638 12.8796 8.56656C12.8288 8.63357 13.0939 8.22182 9 14.6457L5.17672 8.6465ZM9 16.9453C4.85177 16.9453 2.14453 15.726 2.14453 14.8359C2.14453 14.2377 3.53559 13.2541 6.61809 12.8707L8.55527 15.9104C8.60291 15.9852 8.66863 16.0467 8.74636 16.0893C8.82408 16.132 8.91131 16.1543 8.99996 16.1543C9.08862 16.1543 9.17584 16.132 9.25357 16.0893C9.3313 16.0467 9.39702 15.9852 9.44466 15.9104L11.3818 12.8707C14.4644 13.2541 15.8555 14.2377 15.8555 14.8359C15.8555 15.7184 13.1726 16.9453 9 16.9453Z" />
+                        <path d="M9 3.19922C7.54611 3.19922 6.36328 4.38205 6.36328 5.83594C6.36328 7.28982 7.54611 8.47266 9 8.47266C10.4539 8.47266 11.6367 7.28982 11.6367 5.83594C11.6367 4.38205 10.4539 3.19922 9 3.19922ZM9 7.41797C8.12767 7.41797 7.41797 6.70827 7.41797 5.83594C7.41797 4.96361 8.12767 4.25391 9 4.25391C9.87233 4.25391 10.582 4.96361 10.582 5.83594C10.582 6.70827 9.87233 7.41797 9 7.41797Z" />
+                    </svg> 
+                    <span>UDAIPUR</span>
+                </div>
+                <img src="images/Udaipur.png" class="img-fluid card-img-top">
+                <h6 class="p-2">2N Short Domestic Holiday-  Special Package.</h6>
+            </div>
+            <div class="card-footer">
+                    <div class="price-area">
+                        <h6>Starting Form:</h6>
+                        <span class="color-custom h5"><strong>₹9,999</strong></span>
+                        <p>TAXES INCL/PERS</p>
+                    </div>
+                    <button class="btn">Book Trip</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mx-auto">
+        <div class="card ">
+            <div class="card-body p-0">
+                <div class="batch">
+                    <svg class="svg-batch" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                        <path d="M12.005 11.8928C13.9204 8.88722 13.6796 9.2622 13.7348 9.18383C14.4322 8.20023 14.8008 7.04257 14.8008 5.83594C14.8008 2.63602 12.2041 0 9 0C5.80634 0 3.19922 2.63081 3.19922 5.83594C3.19922 7.0418 3.57553 8.22976 4.29574 9.22662L5.99491 11.8929C4.17822 12.172 1.08984 13.004 1.08984 14.8359C1.08984 15.5037 1.52571 16.4554 3.60218 17.197C5.05209 17.7148 6.96906 18 9 18C12.7978 18 16.9102 16.9287 16.9102 14.8359C16.9102 13.0037 13.8254 12.1726 12.005 11.8928ZM5.17672 8.6465C5.17093 8.63744 5.16487 8.62856 5.15855 8.61985C4.55924 7.79537 4.25391 6.81824 4.25391 5.83594C4.25391 3.19859 6.37755 1.05469 9 1.05469C11.617 1.05469 13.7461 3.19954 13.7461 5.83594C13.7461 6.81982 13.4465 7.7638 12.8796 8.56656C12.8288 8.63357 13.0939 8.22182 9 14.6457L5.17672 8.6465ZM9 16.9453C4.85177 16.9453 2.14453 15.726 2.14453 14.8359C2.14453 14.2377 3.53559 13.2541 6.61809 12.8707L8.55527 15.9104C8.60291 15.9852 8.66863 16.0467 8.74636 16.0893C8.82408 16.132 8.91131 16.1543 8.99996 16.1543C9.08862 16.1543 9.17584 16.132 9.25357 16.0893C9.3313 16.0467 9.39702 15.9852 9.44466 15.9104L11.3818 12.8707C14.4644 13.2541 15.8555 14.2377 15.8555 14.8359C15.8555 15.7184 13.1726 16.9453 9 16.9453Z" />
+                        <path d="M9 3.19922C7.54611 3.19922 6.36328 4.38205 6.36328 5.83594C6.36328 7.28982 7.54611 8.47266 9 8.47266C10.4539 8.47266 11.6367 7.28982 11.6367 5.83594C11.6367 4.38205 10.4539 3.19922 9 3.19922ZM9 7.41797C8.12767 7.41797 7.41797 6.70827 7.41797 5.83594C7.41797 4.96361 8.12767 4.25391 9 4.25391C9.87233 4.25391 10.582 4.96361 10.582 5.83594C10.582 6.70827 9.87233 7.41797 9 7.41797Z" />
+                    </svg> 
+                    <span>Chopta & Tungnath</span>
+                </div>
+                <img src="images/Domestic.png" class="img-fluid card-img-top">
+                <h6 class="p-2">2N Amazing Domestic Tour-   travel Package.</h6>
+            </div>
+            <div class="card-footer">
+                    <div class="price-area">
+                        <h6>Starting Form:</h6>
+                        <span class="color-custom h5"><strong>₹12,999</strong></span>
+                        <p>TAXES INCL/PERS</p>
+                    </div>
+                    <button class="btn">Book Trip</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  End of Second row -->
+<!-- End of Our Services -->
+
+<!-- Slick Slider Start -->
+
+<!-- Container for the gallery section -->
+<div class="container text-center pt-5 pb-3" id="gallery">
+    
+    <!-- SVG icons and text heading for the gallery section -->
+    <svg class="svg-color pt-1" xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16">
+        <!-- SVG path defining the shape of the first icon -->
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.92556 7.69046C2.35744 7.63298 2.78906 7.57563 3.21925 7.51077C4.14925 7.37065 5.08588 7.29138 6.01763 7.21249L6.01888 7.21243C6.15888 7.20055 6.29875 7.18874 6.43844 7.17668C7.50663 6.968 8.58732 6.89083 9.66644 6.94628C10.7733 7.06837 11.8592 7.41421 12.8857 7.97163L12.8857 8.23655C11.8592 8.79397 10.7733 9.13981 9.66644 9.26191C8.58732 9.31735 7.50663 9.24018 6.43844 9.03151C5.36831 8.93932 4.29813 8.82412 3.21925 8.69742C2.14031 8.57065 1.07012 8.42092 -6.78702e-07 8.23655L-7.01862e-07 7.97163C0.639938 7.86135 1.28306 7.77588 1.92556 7.69046ZM10.7633 15.8502C10.9332 15.4596 11.12 15.0855 11.3061 14.7127C11.389 14.5468 11.4717 14.3811 11.5527 14.2144C11.8159 13.6729 12.1141 13.1545 12.4299 12.6477C12.5448 12.4632 12.64 12.2604 12.7336 12.061C12.8972 11.7124 13.056 11.3741 13.3071 11.1616C13.7816 10.7768 14.3283 10.5734 14.886 10.574L15 10.7353C14.9945 11.4677 14.8235 12.1813 14.5088 12.7859C14.3311 13.1802 14.0336 13.4059 13.7358 13.6317C13.6073 13.7292 13.4787 13.8268 13.3597 13.9379C12.965 14.3066 12.5615 14.6637 12.1492 15.0093C11.7369 15.3549 11.3159 15.689 10.8685 16L10.7633 15.8502ZM11.7543 0.665536C11.4882 0.436859 11.2226 0.208798 10.9388 -1.5523e-06L10.816 0.149784C11.0528 0.725784 11.3072 1.27877 11.5703 1.82018C11.8335 2.3616 12.1142 2.89157 12.3949 3.40997C12.4795 3.56628 12.5538 3.73514 12.628 3.90394C12.8 4.29501 12.9718 4.68572 13.2721 4.91908C13.7312 5.33563 14.2754 5.56049 14.8334 5.56418L14.9562 5.4144C14.9651 4.68055 14.8095 3.95951 14.5089 3.3408C14.3471 3.01108 14.0894 2.80252 13.824 2.58763C13.6722 2.46474 13.5178 2.33975 13.3773 2.1888C12.9914 1.77409 12.6142 1.3824 12.1931 1.0368C12.0446 0.91489 11.8994 0.790152 11.7543 0.665536Z" />
+    </svg>
+    <span class="color-custom px-1">Journey to the</span>
+    <svg class="svg-color pt-1" xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16">
+        <!-- SVG path defining the shape of the second icon -->
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0744 8.30954C12.6426 8.36702 12.2109 8.42437 11.7807 8.48923C10.8507 8.62935 9.91412 8.70862 8.98237 8.78751L8.98112 8.78757C8.84112 8.79945 8.70125 8.81126 8.56156 8.82332C7.49337 9.032 6.41268 9.10917 5.33356 9.05372C4.22669 8.93163 3.14081 8.58578 2.11432 8.02837V7.76345C3.14081 7.20603 4.22669 6.86018 5.33356 6.73809C6.41268 6.68265 7.49337 6.75982 8.56156 6.96849C9.63169 7.06068 10.7019 7.17588 11.7807 7.30259C12.8597 7.42935 13.9299 7.57908 15 7.76345V8.02837C14.3601 8.13865 13.7169 8.22412 13.0744 8.30954ZM4.23673 0.14976C4.06677 0.540388 3.88 0.914468 3.69388 1.28726C3.61104 1.45317 3.52831 1.61887 3.44728 1.78561C3.18413 2.32705 2.88589 2.84546 2.57011 3.35234C2.45519 3.5368 2.36002 3.73958 2.26642 3.939C2.10282 4.28757 1.94402 4.62593 1.69294 4.83843C1.21844 5.2232 0.671682 5.42665 0.114031 5.42597L0 5.26468C0.00551875 4.53235 0.176481 3.81866 0.491219 3.2141C0.6689 2.81982 0.966407 2.59414 1.26418 2.36828C1.39271 2.27078 1.52129 2.17324 1.64031 2.06209C2.03504 1.69345 2.43853 1.33633 2.8508 0.990726C3.26307 0.645126 3.68411 0.31104 4.13147 0L4.23673 0.14976ZM3.24568 15.3345C3.51184 15.5631 3.77735 15.7912 4.06123 16L4.18404 15.8502C3.9472 15.2742 3.69281 14.7212 3.42966 14.1798C3.16651 13.6384 2.88581 13.1084 2.60511 12.59C2.52048 12.4337 2.44621 12.2649 2.37198 12.0961C2.19999 11.705 2.02816 11.3143 1.72794 11.0809C1.26879 10.6644 0.7246 10.4395 0.166563 10.4358L0.0437562 10.5856C0.0348937 11.3194 0.190456 12.0405 0.491113 12.6592C0.652919 12.9889 0.910556 13.1975 1.17597 13.4124C1.32782 13.5353 1.48222 13.6602 1.62268 13.8112C2.00863 14.2259 2.38582 14.6176 2.80686 14.9632C2.95538 15.0851 3.10063 15.2098 3.24568 15.3345Z" />
+    </svg><br>
+    
+    <!-- Main heading for the gallery section -->
+    <h1 class="text-center my-4 custom-heading">Desired World Tourist Place</h1>
+    
+    <!-- Slick slider container -->
+    <div class="row slider">
+        <!-- Slide 1 -->
+        <div class="col-md-12">
+            <figure>
+                <img src="images/Kashmir.jpg" class="img-fluid" alt="Kashmir">
+                <figcaption>KASHMIR</figcaption>
+            </figure>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="col-md-12">
+            <figure>
+                <img src="images/Goa.png" class="img-fluid" alt="Goa">
+                <figcaption>GOA</figcaption>
+            </figure>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="col-md-12">
+            <figure>
+                <img src="images/Ladhak.jpg" class="img-fluid" alt="Laddakh">
+                <figcaption>LADDAKH</figcaption>
+            </figure>
+        </div>
+        
+        <!-- Slide 4 -->
+        <div class="col-md-12">
+            <figure>
+                <img src="images/Leh.jpg" class="img-fluid" alt="Leh">
+                <figcaption>LEH</figcaption>
+            </figure>
+        </div>
+        
+        <!-- Slide 5 -->
+        <div class="col-md-12">
+            <figure>
+                <img src="images/Pondicherry.jpg" class="img-fluid" alt="Pondicherry">
+                <figcaption>PONDICHERRY</figcaption>
+            </figure>
+        </div>
+        
+        <!-- Slide 6 -->
+        <div class="col-md-12">
+            <figure>
+                <img src="images/Lakshadeep.jpg" class="img-fluid" alt="Lakshadweep">
+                <figcaption>LAKSHADWEEP</figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery and Slick Carousel scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  // Initialize Slick Slider with specified options
+  $('.slider').slick({
+    dots: true, // Show navigation dots
+    infinite: true, // Infinite scrolling
+    speed: 100, // Transition speed
+    slidesToShow: 3, // Number of slides to show at once
+    slidesToScroll: 1, // Number of slides to scroll on each navigation
+    autoplay: true, // Enable autoplay
+    responsive: [
+      {
+        breakpoint: 1024, // Breakpoint for tablets and small desktops
+        settings: {
+          slidesToShow: 3, // Number of slides to show at once
+          slidesToScroll: 3, // Number of slides to scroll at once
+          infinite: true, // Infinite scrolling
+          dots: true // Show navigation dots
+        }
+      },
+      {
+        breakpoint: 600, // Breakpoint for mobile devices
+        settings: {
+          slidesToShow: 2, // Number of slides to show at once
+          slidesToScroll: 2 // Number of slides to scroll at once
+        }
+      },
+      {
+        breakpoint: 480, // Breakpoint for very small mobile devices
+        settings: {
+          slidesToShow: 1, // Number of slides to show at once
+          slidesToScroll: 1 // Number of slides to scroll at once
+        }
+      }
+    ]
+  });
+});
+</script>
+
+<!-- Slick Slider End -->
+
+  <!-- Slick slider End -->
+  <footer class="footer-container row">
+    <div class="about-contact">
+        <div class=" col-md-4 about-us">
+            <h3>About Us</h3>
+            <p>We provide the best travel experiences with top destinations worldwide.</p>
+        </div>
+        <div class="col-md-4 contact-details">
+            <h3>Contact Details</h3>
+            <p>Email: info@travelsite.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+    </div>
+    <div class="col-md-4 footer-section reviews">
+        <div>
+            <h3>Customer Reviews</h3>
+            <p>"Amazing experience! Highly recommend."</p>
+            <p>"The best travel agency I've ever used!"</p>
+            <p>"Great service and friendly staff."</p>
+        </div>
+    </div>
+</footer>
+
+  
+</body>
+</html>
